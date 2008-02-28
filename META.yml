@@ -1,9 +1,9 @@
 --- 
-abstract: contact-related value objects
+abstract: ~
 author: 
-  - Marcel GrE<uuml>nauer, C<< <marcel@cpan.org> >>
+  - "{% ELSE %}"
 build_requires: 
-  Test::CompanionClasses: 0
+  Test::CompanionClasses: 0.03
   Test::Compile: 0
   Test::More: 0
   UNIVERSAL::require: 0
@@ -23,4 +23,4 @@ requires:
   Email::Valid: 0
   Error::Hierarchy: 0
   perl: 5.6.0
-version: 0.01
+version: 0.02
