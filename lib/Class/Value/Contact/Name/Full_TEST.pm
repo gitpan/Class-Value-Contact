@@ -1,139 +1,72 @@
-package Class::Value::Contact::Name::Full_TEST;
-
-# $Id: Full_TEST.pm 12801 2007-03-12 15:03:28Z gr $
-
+use 5.008;
 use strict;
 use warnings;
+
+package Class::Value::Contact::Name::Full_TEST;
+our $VERSION = '1.100840';
+# ABSTRACT: Contact-related value objects
 use Test::More;
-
-
-our $VERSION = '0.02';
-
-
-use base 'Class::Value::Test';
-
+use parent 'Class::Value::Test';
 
 # A name is well-formed if it consists of 2-5 whitespace-separated words, at
-# least two of which must contain at least two [A-Za-z] characters. 
-
+# least two of which must contain at least two [A-Za-z] characters.
 use constant TESTDATA => (
-    {
-        args => {},
-        valid => [
-            'Florian Helmberger'
+    {   args    => {},
+        valid   => ['Florian Helmberger'],
+        invalid => [
+            qw(
+              Borg
+              )
         ],
-        invalid => [ qw(
-            Borg
-        ) ],
     },
 );
-
-
 1;
 
 
 __END__
-
-
+=pod
 
 =head1 NAME
 
-Class::Value::Contact::Name::Full_TEST - contact-related value objects
+Class::Value::Contact::Name::Full_TEST - Contact-related value objects
 
-=head1 SYNOPSIS
+=head1 VERSION
 
-    Class::Value::Contact::Name::Full_TEST->new;
-
-=head1 DESCRIPTION
-
-None yet. This is an early release; fully functional, but undocumented. The
-next release will have more documentation.
-
-=head1 METHODS
-
-=over 4
-
-
-
-=back
-
-Class::Value::Contact::Name::Full_TEST inherits from L<Class::Value::Test>.
-
-The superclass L<Data::Semantic::Test> defines these methods and functions:
-
-    PLAN(), munge_args(), run(), test_is_invalid(), test_is_valid()
-
-The superclass L<Test::CompanionClasses::Base> defines these methods and
-functions:
-
-    new(), clear_package(), make_real_object(), package(), package_clear(),
-    planned_test_count()
-
-The superclass L<Class::Accessor::Complex> defines these methods and
-functions:
-
-    mk_abstract_accessors(), mk_array_accessors(), mk_boolean_accessors(),
-    mk_class_array_accessors(), mk_class_hash_accessors(),
-    mk_class_scalar_accessors(), mk_concat_accessors(),
-    mk_forward_accessors(), mk_hash_accessors(), mk_integer_accessors(),
-    mk_new(), mk_object_accessors(), mk_scalar_accessors(),
-    mk_set_accessors(), mk_singleton()
-
-The superclass L<Class::Accessor> defines these methods and functions:
-
-    _carp(), _croak(), _mk_accessors(), accessor_name_for(),
-    best_practice_accessor_name_for(), best_practice_mutator_name_for(),
-    follow_best_practice(), get(), make_accessor(), make_ro_accessor(),
-    make_wo_accessor(), mk_accessors(), mk_ro_accessors(),
-    mk_wo_accessors(), mutator_name_for(), set()
-
-The superclass L<Class::Accessor::Installer> defines these methods and
-functions:
-
-    install_accessor()
-
-The superclass L<Data::Inherited> defines these methods and functions:
-
-    every_hash(), every_list(), flush_every_cache_by_key()
-
-=head1 TAGS
-
-If you talk about this module in blogs, on del.icio.us or anywhere else,
-please use the C<classvaluecontact> tag.
-
-=head1 VERSION 
-                   
-This document describes version 0.02 of L<Class::Value::Contact::Name::Full_TEST>.
-
-=head1 BUGS AND LIMITATIONS
-
-No bugs have been reported.
-
-Please report any bugs or feature requests to
-C<<bug-class-value-contact@rt.cpan.org>>, or through the web interface at
-L<http://rt.cpan.org>.
+version 1.100840
 
 =head1 INSTALLATION
 
 See perlmodinstall for information and options on installing Perl modules.
 
+=head1 BUGS AND LIMITATIONS
+
+No bugs have been reported.
+
+Please report any bugs or feature requests through the web interface at
+L<http://rt.cpan.org/Public/Dist/Display.html?Name=Class-Value-Contact>.
+
 =head1 AVAILABILITY
 
 The latest version of this module is available from the Comprehensive Perl
-Archive Network (CPAN). Visit <http://www.perl.com/CPAN/> to find a CPAN
-site near you. Or see <http://www.perl.com/CPAN/authors/id/M/MA/MARCEL/>.
+Archive Network (CPAN). Visit L<http://www.perl.com/CPAN/> to find a CPAN
+site near you, or see
+L<http://search.cpan.org/dist/Class-Value-Contact/>.
+
+The development version lives at
+L<http://github.com/hanekomu/Class-Value-Contact/>.
+Instead of sending patches, please fork this project using the standard git
+and github infrastructure.
 
 =head1 AUTHOR
 
-Marcel GrE<uuml>nauer, C<< <marcel@cpan.org> >>
+  Marcel Gruenauer <marcel@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright 2004-2008 by Marcel GrE<uuml>nauer
+This software is copyright (c) 2004 by Marcel Gruenauer.
 
-This library is free software; you can redistribute it and/or modify
-it under the same terms as Perl itself.
-
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
 
 =cut
 

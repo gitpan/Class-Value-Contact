@@ -1,27 +1,43 @@
-This is the Perl module Class::Value::Contact.
+NAME
+    Class::Value::Contact - Contact-related value objects
+
+VERSION
+    version 1.100840
+
+METHODS
+  send_notify_value_invalid
+    FIXME
+
+  send_notify_value_not_wellformed
+    FIXME
 
 INSTALLATION
+    See perlmodinstall for information and options on installing Perl
+    modules.
 
-Class::Value::Contact installation is straightforward. If your CPAN shell is
-set up, you should just be able to do
+BUGS AND LIMITATIONS
+    No bugs have been reported.
 
-    % cpan Class::Value::Contact
+    Please report any bugs or feature requests through the web interface at
+    <http://rt.cpan.org/Public/Dist/Display.html?Name=Class-Value-Contact>.
 
-Download it, unpack it, then build it as per the usual:
+AVAILABILITY
+    The latest version of this module is available from the Comprehensive
+    Perl Archive Network (CPAN). Visit <http://www.perl.com/CPAN/> to find a
+    CPAN site near you, or see
+    <http://search.cpan.org/dist/Class-Value-Contact/>.
 
-    % perl Makefile.PL
-    % make && make test
+    The development version lives at
+    <http://github.com/hanekomu/Class-Value-Contact/>. Instead of sending
+    patches, please fork this project using the standard git and github
+    infrastructure.
 
-Then install it:
+AUTHOR
+      Marcel Gruenauer <marcel@cpan.org>
 
-    % make install
+COPYRIGHT AND LICENSE
+    This software is copyright (c) 2004 by Marcel Gruenauer.
 
-DOCUMENTATION
+    This is free software; you can redistribute it and/or modify it under
+    the same terms as the Perl 5 programming language system itself.
 
-Class::Value::Contact documentation is available as in POD. So you can do:
-
-    % perldoc Class::Value::Contact
-
-to read the documentation online with your favorite pager.
-
-Marcel Gruenauer
